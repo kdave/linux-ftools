@@ -102,7 +102,7 @@ void fincore(char* path, int pages, int summarize, int only_cached, struct finco
     long cached_size = (double)cached * (double)page_size;
 
     if ( only_cached == 0 || cached > 0 ) {
-        printf( "%s %ld %d %d %ld %f\n", 
+        printf( "%-50s %-20ld %-10d %-10d %-20ld %-10f\n",
                 path, file_stat.st_size, total_pages, cached, cached_size, cached_perc );
     }
 
@@ -183,8 +183,13 @@ int main(int argc, char *argv[]) {
     }
 
     long total_cached_size = 0;
-
-    printf("filename size\ttotal pages\tcached pages\tcached size\tcached percentage\n");
+    char *name = "Name";
+    char *size = "Size(bytes)";
+    char *total_pages = "TotalPages";
+    char *cached_pages = "CachedPages";
+    char *cached_sizes = "CachedSizes";
+    char *cached_percentage = "CachedPercent";
+    printf("%-50s %-20s %-10s %-10s %-20s %-10s", name, size, total_pages, cached_pages, cached_sizes, cached_percentage);
 
     for( ; fidx < argc; ++fidx ) {
 
