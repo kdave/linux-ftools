@@ -179,6 +179,12 @@ void graph(double regions[], long nr_regions ) {
 
 }
 
+static void _show_headers() {
+    printf( STR_FORMAT, "filename", "size", "total_pages", "min_cached page", "cached_pages", "cached_size", "cached_perc" );
+    printf( STR_FORMAT, "--------", "----", "-----------", "---------------", "------------", "-----------", "-----------" );
+    return;
+}
+
 void fincore(char* path, 
              struct fincore_result *result ) {
 
@@ -329,9 +335,8 @@ void fincore(char* path,
 
     if ( arg_only_cached == 0 || cached > 0 ) {
 
-        if ( arg_graph ) {
+        if ( arg_graph )
             _show_headers();
-        }
 
         if ( arg_vertical ) {
 
@@ -403,15 +408,6 @@ void help() {
     fprintf( stderr, "  -h --help               Print this message.\n" );
     fprintf( stderr, "  -L --vertical           Print the output of this script vertically.\n" );
     fprintf( stderr, "\n" );
-
-}
-
-void _show_headers() {
-
-    printf( STR_FORMAT, "filename", "size", "total_pages", "min_cached page", "cached_pages", "cached_size", "cached_perc" );
-    printf( STR_FORMAT, "--------", "----", "-----------", "---------------", "------------", "-----------", "-----------" );
-    
-    return;
 
 }
 
