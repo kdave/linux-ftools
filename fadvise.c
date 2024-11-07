@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <linux-ftools.h>
+#include <ctype.h>
 
 //convert the given string to uppercase.
 void strtoupper( char* str ) {
