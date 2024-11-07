@@ -1,17 +1,18 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
-AC_PREREQ(2.61)
-AC_INIT([linux-ftools], [1.0.0], BUG-REPORT-ADDRESS)
+AC_PREREQ([2.72])
+AC_INIT([linux-ftools],[1.3.0],[BUG-REPORT-ADDRESS])
 AC_CONFIG_SRCDIR([fincore.c])
-AM_INIT_AUTOMAKE([linux-ftools], [1.0.0])
-#AC_CONFIG_HEADER([config.h])
+AM_INIT_AUTOMAKE
+AC_CONFIG_HEADERS([config.h])
 
 # Checks for programs.
 AC_PROG_CC
 
-# Checks for header files.
-AC_HEADER_STDC
+AC_CHECK_INCLUDES_DEFAULT
+AC_PROG_EGREP
+
 AC_CHECK_HEADERS([fcntl.h stdlib.h string.h sys/time.h unistd.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
