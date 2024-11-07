@@ -144,8 +144,6 @@ void graph(double regions[], long nr_regions ) {
 
     graph_header(nr_regions);
 
-    int *ptr;
-
     int i, j;
     
     int perc_width = 10;
