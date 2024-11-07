@@ -75,5 +75,6 @@ int main() {
     dump( "RLIMIT_STACK:       ", RLIMIT_STACK );
     dump( "RLIMIT_OFILE:       ", RLIMIT_OFILE );
 
+    return 0;
 }
 

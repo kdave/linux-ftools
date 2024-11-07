@@ -32,4 +32,5 @@ int main() {
 
     sleep( 2147483648 );
 
+    return 0;
 }
