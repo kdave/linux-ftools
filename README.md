@@ -2,6 +2,8 @@ These are tools designed for working with modern linux system calls including, m
 
 We designed these primarily to work in high performance environments to determine information about the running kernel, improve system performance, and debug performance problems.
 
+Original project: https://code.google.com/archive/p/linux-ftools
+
 Python bindings: https://github.com/david415/python-ftools
 
 ## fincore
