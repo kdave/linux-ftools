@@ -36,7 +36,6 @@ void fincore(char* path, int pages, int summarize, int only_cached, struct finco
     unsigned char *mincore_vec;
     size_t page_size = getpagesize();
     size_t page_index;
-    char *errstr;
 
     int flags = O_RDWR;
     
