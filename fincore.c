@@ -522,7 +522,7 @@ int main(int argc, char *argv[]) {
        printf( "    min size:         %ld\n", arg_min_size );
        printf( "    min cached size:  %ld\n", arg_min_cached_size );
        printf( "    min cached perc:  %ld\n", arg_min_cached_perc );
-       printf( "    vertical:         %ld\n", arg_vertical );
+       printf( "    vertical:         %d\n",  arg_vertical );
 
    }
 
