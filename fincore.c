@@ -532,8 +532,7 @@ int main(int argc, char *argv[]) {
 
     struct winsize ws; 
 
-    if (ioctl(stdout,TIOCGWINSZ,&ws) == 0) { 
-        
+    if (ioctl(fileno(stdout), TIOCGWINSZ, &ws) == 0) {
         if ( ws.ws_col > nr_regions ) {
             nr_regions = ((ws.ws_col/2)*2) - 10;
         }
