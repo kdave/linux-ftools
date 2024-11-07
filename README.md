@@ -1,6 +1,8 @@
 These are tools designed for working with modern linux system calls including, mincore, fallocate, fadvise, etc.
-
 We designed these primarily to work in high performance environments to determine information about the running kernel, improve system performance, and debug performance problems.
+
+This may answer questions like *How can you tell whether a file is being cached in memory in linux?*
+(https://stackoverflow.com/questions/210809/how-can-you-tell-whether-a-file-is-being-cached-in-memory-in-linux).
 
 Original project: https://code.google.com/archive/p/linux-ftools
 
