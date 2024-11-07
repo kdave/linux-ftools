@@ -7,12 +7,12 @@
 #include <sys/stat.h>
 #include <unistd.h>
 #include <sys/mman.h>
-#include <linux-ftools.h>
 #include <math.h>
 #include <string.h>
 #include <errno.h>
 #include <locale.h>
-#include <sys/ioctl.h> 
+#include <sys/ioctl.h>
+#include "linux-ftools.h"
 
 char STR_FORMAT[] =  "%-80s %18s %18s %18s %18s %18s %18s\n";
 char DATA_FORMAT[] = "%-80s %'18ld %'18d %'18ld %'18ld %'18ld %18.2f\n";
